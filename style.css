@@ -1,0 +1,255 @@
+/* --- Root Variables --- */
+:root {
+    --primary: #1b4332; 
+    --secondary: #d4a373; 
+    --dark: #212529;
+    --light: #f8f9fa;
+    --white: #ffffff;
+    --transition: all 0.3s ease;
+    --shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* --- Global Reset --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--dark);
+    line-height: 1.6;
+    scroll-behavior: smooth;
+    background-color: var(--white);
+    overflow-x: hidden; /* Mencegah scroll ke samping yang merusak tampilan HP */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+ul { list-style: none; }
+a { text-decoration: none; color: inherit; }
+img { max-width: 100%; height: auto; display: block; }
+
+/* --- Navbar --- */
+.navbar {
+    background: var(--white);
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Gabungan Logo & Nama CV (Penyederhanaan dari kode Anda) */
+.logo a {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Jarak antara logo dan teks */
+}
+
+.logo img {
+    height: 50px; 
+    width: auto;
+    transition: var(--transition);
+}
+
+.logo span {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--primary);
+    white-space: nowrap;
+}
+
+.menu {
+    display: flex;
+    gap: 25px;
+}
+
+.menu a {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--primary);
+    transition: var(--transition);
+}
+
+.menu a:hover {
+    color: var(--secondary);
+}
+
+/* --- Hero Section --- */
+.hero {
+    height: 100vh;
+    min-height: 600px;
+    position: relative;
+    background: url('https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&q=80&w=1500') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.6);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 5vw, 3.5rem); /* Font otomatis mengecil di HP */
+    margin-bottom: 20px;
+}
+
+.hero-content h1 span { color: var(--secondary); }
+
+.hero-btns {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* --- Buttons --- */
+.btn {
+    padding: 12px 35px;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: var(--transition);
+    display: inline-block;
+}
+
+.btn-primary { background: var(--secondary); color: var(--white); }
+.btn-primary:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(212,163,115,0.4); }
+
+.btn-outline { border: 2px solid var(--white); color: var(--white); }
+.btn-outline:hover { background: var(--white); color: var(--primary); }
+
+/* --- Layout Sections --- */
+.section { padding: 100px 0; }
+.bg-light { background: var(--light); }
+
+.section-header { text-align: center; margin-bottom: 60px; }
+.section-header h2 { font-size: 2.2rem; color: var(--primary); }
+.line { width: 60px; height: 4px; background: var(--secondary); margin: 15px auto; }
+
+/* --- Grids (About, Vision, Products, Team) --- */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.vision-grid, .product-grid, .team-grid {
+    display: grid;
+    gap: 30px;
+}
+
+.vision-grid { grid-template-columns: 1fr 1fr; }
+.product-grid, .team-grid { grid-template-columns: repeat(3, 1fr); }
+
+.card-style {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.card-style:hover { transform: translateY(-10px); }
+
+/* --- Contact Section (Side by Side Map) --- */
+.contact-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Memastikan Map di sebelah kanan */
+    gap: 40px;
+    background: var(--primary);
+    color: var(--white);
+    border-radius: 20px;
+    overflow: hidden;
+    align-items: stretch;
+}
+
+.contact-info { padding: 50px; }
+
+.info-list li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.info-list i { color: var(--secondary); font-size: 1.2rem; }
+
+.contact-map {
+    width: 100%;
+    min-height: 400px;
+}
+
+.contact-map iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* --- Social Media --- */
+.social-media { margin-top: 30px; }
+.social-icons { display: flex; gap: 15px; }
+
+.icon-box {
+    width: 45px; height: 45px;
+    display: flex; align-items: center; justify-content: center;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.1);
+    font-size: 1.3rem;
+    transition: var(--transition);
+}
+
+.icon-box:hover { transform: translateY(-5px); color: var(--white); }
+.wa:hover { background: #25d366; }
+.ig:hover { background: #e1306c; }
+.tt:hover { background: #000; }
+
+/* --- Footer --- */
+footer { padding: 40px 0; background: #0d2119; color: #888; text-align: center; }
+
+/* --- RESPONSIF (MEDIA QUERIES) --- */
+
+@media (max-width: 1024px) {
+    .product-grid, .team-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 768px) {
+    .menu { display: none; } /* Di HP, menu navigasi sebaiknya disembunyikan atau dibuat menu hamburger */
+    
+    .logo img { height: 40px; }
+    .logo span { font-size: 1rem; }
+
+    .about-grid, .vision-grid, .product-grid, .team-grid, .contact-box {
+        grid-template-columns: 1fr; /* Semua grid jadi 1 kolom di HP */
+    }
+
+    .contact-info { padding: 30px; }
+    .contact-map { min-height: 300px; }
+
+    .section { padding: 60px 0; }
+}
