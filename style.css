@@ -161,6 +161,9 @@ box-shadow: 0 5px 20px rgba(0,0,0,0.15);
 .section-header h2 { font-size: 2.2rem; color: var(--primary); }
 .line { width: 60px; height: 4px; background: var(--secondary); margin: 15px auto; }
 
+.section-value-chain-clean { text-align: center; margin-bottom: 60px; }
+.section-value-chain-clean h2 { font-size: 2.2rem; color: var(--primary); }
+
 /* --- Grids (About, Vision, Products, Team) --- */
 .about-grid {
     display: grid;
