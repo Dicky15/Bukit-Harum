@@ -62,28 +62,39 @@
         </div>
     </section>
 
-    <section id="vision" class="section bg-light">
+    <section id="why-us" class="section bg-light">
         <div class="container">
-            <div class="section-header">
-                <h2>Vision & Mission</h2>
-                <div class="line"></div>
-            </div>
+
+        <div class="section-header">
+            <h2>Why Choose Us ?</h2>
+            <p>We are committed to delivering premium Indonesian spices through reliable supply chains, professional service, and long-term partnerships with global buyers.</p>
+        </div>
+
             <div class="vision-grid">
+
+                <!-- Quality -->
                 <div class="vision-card">
-                    <div class="icon">🌍</div>
-                    <h3>Vision</h3>
-                    <p>To be the leading global partner in providing Indonesian spices, recognized for superior quality, integrity, and sustainable business practices.</p>
+                    <div class="icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>Quality Assurance</h3>
+                    <p>We provide premium-quality spices that meet the specific requirements and expectations of our international buyers.</p>
                 </div>
+
+                <!-- Supply -->
                 <div class="vision-card">
-                    <div class="icon">🌱</div>
-                    <h3>Mission</h3>
-                    <ul>
-                        <li>Guaranteeing product quality in accordance with international export standards.</li>
-                        <li>Building a fair trade ecosystem to empower local farmers.</li>
-                        <li>Innovating in processing, packaging, and global logistics efficiency.</li>
-                    </ul>
+                    <div class="icon"><i class="fas fa-seedling"></i></div>
+                    <h3>Reliable Supply</h3>
+                    <p>We maintain consistent quality and ensure reliable supply through close cooperation with local farmers and trusted collectors.</p>
                 </div>
+
+                <!-- Partnership -->
+                <div class="vision-card">
+                    <div class="icon"><i class="fas fa-globe"></i></div>
+                    <h3>Global Partnership</h3>
+                    <p>We provide professional service, clear communication, and long-term partnerships with customers worldwide.</p>
+                </div>
+
             </div>
+
         </div>
     </section>
 
@@ -124,47 +135,45 @@
         </div>
     </section>
 
-    <section id="team" class="section bg-light">
-        <div class="container">
-            <div class="section-header">
-                <h2>Our Management Team</h2>
-                <div class="line"></div>
-                <p>An experienced team dedicated to ensuring that Indonesia's finest spices reach you with global standards.</p>
-            </div>
-            <div class="team-grid">
-                <!-- Member 1: CEO -->
-                <div class="team-card">
-                    <div class="team-img-wrapper">
-                        <div class="team-img" style="background-image: url('https://via.placeholder.com/300x300?text=Director');"></div>
+    <section class="value-chain-clean">
+            <div class="container">
+                <h2 class="section-title">Our Value Chain: From Farm to Global Market</h2>
+                <p class="section-subtitle">An experienced team dedicated to ensuring that Indonesia's finest spices reach you with global standards.</p>
+                
+                <div class="chain-wrapper-centered">
+                    <div class="chain-card-centered">
+                        <div class="icon-frame">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3>Ethical & Premium Sourcing</h3>
+                        <p>Directed by our Strategic Team to ensure ethical and premium sourcing from Indonesian farmers.</p>
                     </div>
-                    <h4>Managing Director</h4>
-                    <p class="team-role">Business Strategy & Global Partnership</p>
-                    <p class="team-desc">Focuses on developing local farmer networks and establishing long-term relationships with international partners.</p>
-                </div>
 
-                <!-- Member 2: QA -->
-                <div class="team-card">
-                    <div class="team-img-wrapper">
-                        <div class="team-img" style="background-image: url('https://via.placeholder.com/300x300?text=Quality+Control');"></div>
-                    </div>
-                    <h4>Quality Assurance Manager</h4>
-                    <p class="team-role">Standardization & Certification</p>
-                    <p class="team-desc">Ensures every batch of nutmeg and cloves meets phytosanitary standards and international Grade-A quality requirements.</p>
-                </div>
+                    <div class="chain-arrow-centered">→</div>
 
-                <!-- Member 3: Logistics -->
-                <div class="team-card">
-                    <div class="team-card">
-                    <div class="team-img-wrapper">
-                        <div class="team-img" style="background-image: url('https://via.placeholder.com/300x300?text=Logistics');"></div>
+                    <div class="chain-card-centered">
+                        <div class="icon-frame">
+                            <i class="fas fa-microscope"></i>
+                        </div>
+                        <h3>Rigorous Standardization</h3>
+                        <p>Under strict Quality Assurance to meet Phytosanitary and Grade-A international standards.</p>
                     </div>
-                    <h4>Export & Operations Manager</h4>
-                    <p class="team-role">Supply Chain & Global Logistics</p>
-                    <p class="team-desc">Expert in global shipment management, ensuring complete export documentation and on-time delivery to any port worldwide.</p>
+
+                    <div class="chain-arrow-centered">→</div>
+
+                    <div class="chain-card-centered">
+                        <div class="icon-frame">
+                            <i class="fas fa-ship"></i>
+                        </div>
+                        <h3>Seamless Global Execution</h3>
+                        <p>Managed by our Export Experts for seamless global delivery and documentation.</p>
+                    </div>
                 </div>
             </div>
-        </div>
     </section>
+
+<script src="https://kit.fontawesome.com/your-kit-code.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/your-kit-code.js" crossorigin="anonymous"></script>
 
     <section id="contact" class="section">
         <div class="container">
@@ -220,6 +229,21 @@
             <p>&copy; 2025 CV Bukit Harum. Crafted from Indonesia's Rich Soil.</p>
         </div>
     </footer>
+
+    <script>
+        window.addEventListener("scroll", function(){
+
+        let navbar = document.querySelector(".navbar");
+
+        if(window.scrollY > 80){
+        navbar.classList.add("scrolled");
+        }else{
+        navbar.classList.remove("scrolled");
+        }
+
+        });
+    </script>
+
 
 </body>
 </html>
